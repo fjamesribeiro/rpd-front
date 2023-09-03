@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import CadPaciente from "./components/pages/CadPaciente";
+import Navbar from "./components/layout/Navbar";
+import Container from "./components/layout/Container";
+import Home from "./components/pages/Home";
+import Footer from "./components/layout/Footer";
+import Rpd from "./components/pages/Rpd";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Container customClass="min-height">
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/cadPaciente" element={<CadPaciente />} />
+          <Route path="/rpd" element={<Rpd />} />
+        </Routes>
+      </Container>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
