@@ -1,8 +1,13 @@
 import Input from "../form/Input";
+import Select from "../form/Select";
 
 function Rpd() {
     return (
-        <p>RPD</p>
+        <div>
+            <p>RPD</p>
+            <Select >
+
+        </div>
     )
 }
 

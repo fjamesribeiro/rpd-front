@@ -21,6 +21,9 @@ function Navbar() {
                     <li className={styles.item}>
                         <Link to="/rpd">Cadastro de RPD</Link>
                     </li>
+                    <li className={styles.item}>
+                        <Link to="/pacientes">Lista de Pacientes</Link>
+                    </li>
                 </ul>
             </Container>
         </div>

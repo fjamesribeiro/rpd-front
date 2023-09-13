@@ -11,7 +11,7 @@ function CadPaciente() {
   }
 
   function onSubmit(e) {
-    console.log(paciente);
+    paciente.psicologoId = parseInt(paciente.psicologoId);
     e.preventDefault();
     const url = process.env.REACT_APP_API_URL;
 
@@ -28,7 +28,7 @@ function CadPaciente() {
   }
 
   return (
-    <form onSubmit={onSubmit} className={styles.home_container}>
+    <form onSubmit={onSubmit} className={styles.home_container} >
       <Input
         name="email"
         text="Digite o email do paciente"
@@ -42,7 +42,6 @@ function CadPaciente() {
         placeHolder="Digite o email do paciente"
         type="number"
         handleOnChange={handleChange}
-        value={paciente.psicologoId}
       />
       <SubmitButton text="Cadastrar" />
     </form>

@@ -5,6 +5,7 @@ import Container from "./components/layout/Container";
 import Home from "./components/pages/Home";
 import Footer from "./components/layout/Footer";
 import Rpd from "./components/pages/Rpd";
+import Pacientes from "./components/pages/Pacientes";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/cadPaciente" element={<CadPaciente />} />
           <Route path="/rpd" element={<Rpd />} />
+          <Route path="/pacientes" element={<Pacientes />} />
         </Routes>
       </Container>
       <Footer />
